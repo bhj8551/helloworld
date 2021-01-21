@@ -1,9 +1,8 @@
 let express = require('express');
 let app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+// 현재위치/public route를 static폴더로 지정
+app.use(express.static(__dirname + '/public')); // 1
 
 let port = 3444;
 app.listen(port, () => {
